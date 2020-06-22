@@ -11,23 +11,25 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container">
-      <GlobalProvider>
+    <div>
       <Header />
-      <div className="row">
-        <div className="col-md-6">
-          <TransactionList />
-        </div>
+      <div className="container mt-2">
+        <GlobalProvider>
+        <div className="row">
           <div className="col-md-6">
-            <div className="">
-              <Balance />
-              <IncomeExpenses />
-              <AddTransaction />
-            </div>
+            <TransactionList />
           </div>
-        {/* <div className="col-md-3"></div> */}
+            <div className="col-md-6">
+              <div className="">
+                <Balance />
+                <IncomeExpenses />
+                <AddTransaction />
+              </div>
+            </div>
+          {/* <div className="col-md-3"></div> */}
+        </div>
+        </GlobalProvider>
       </div>
-      </GlobalProvider>
     </div>
   );
 }
